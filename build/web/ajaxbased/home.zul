@@ -1,0 +1,45 @@
+<zk>
+<vbox vflex="1" hflex="1" >
+        <grid align = "center">
+		<columns>
+			<column align="center" label = "Input Absensi"/>
+		</columns>
+		<rows>
+			<row>	
+                            <label width="30px" value="No.Induk :"/>
+                            <textbox width ="220px" id="tNik"/>
+			</row>
+                        <row>
+                            <label value="Nama :"/>
+                            <textbox width="220px" id="tNama"/>
+                        </row>
+                        <row>
+                            <label value="Jenis Absen :"/>
+                            <combobox width ="220px" id = "cmbJenis">
+		     		<comboitem label="Masuk"/>
+                                <comboitem label="Pulang"/>
+                                <comboitem label="Lembur"/>
+                            </combobox>
+                        </row>
+                        <row>
+                            <label value="Jam :"/><label style = "font-size:20px" id="jam" value="00:00"/>
+                        </row>
+                        <row>
+                            <label value="Tanggal :"/><label style = "font-size:20px" id="tgl" value="xx/xx/xxxx"/>
+                        </row>
+		</rows>
+	</grid>
+        <grid align="center">
+		<columns>
+                    <column align="center">
+                        <button width="90px" label="Simpan" onClick="btnSave"></button>
+                    </column>
+		</columns>
+		<rows>
+			<row>	
+			</row>
+		</rows>
+	</grid>
+</vbox>
+
+</zk>

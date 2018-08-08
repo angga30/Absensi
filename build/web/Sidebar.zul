@@ -1,0 +1,25 @@
+
+<grid hflex="1" vflex="1" sclass="sidebar" id="fnList" apply="controller.java">
+    
+    <columns>
+        <column width="36px"/>
+        <column/>
+    </columns>
+    <rows>
+        <row>
+            <image width = "20px" src="/img/003-browsing.png"/>
+            <a href="/index.zul">Menu Utama</a>
+        </row>
+        <row>
+            <image width = "20px" src="/img/001-phone.png"/>
+            <a href="http://www.zkoss.org/zkdemo">Administrator</a>
+        </row>
+        <row>
+            <image width = "20px" src="/img/002-video.png"/>
+            <a href="http://books.zkoss.org/wiki/ZK_Developer's_Reference">
+            Rekap Absensi
+            </a>
+        </row>
+    </rows>
+</grid>
+
