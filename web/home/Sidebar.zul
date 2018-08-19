@@ -12,7 +12,7 @@
         </row>
         <row>
             <image width = "20px" src="/img/001-phone.png"/>
-            <a href="http://www.zkoss.org/zkdemo">Administrator</a>
+            <a href="/login/index.zul">Administrator</a>
         </row>
         <row>
             <image width = "20px" src="/img/002-video.png"/>

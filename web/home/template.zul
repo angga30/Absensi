@@ -22,12 +22,12 @@ Copyright (C) 2006 Potix Corporation. All Rights Reserved.
 <zk xmlns="http://www.zkoss.org/2005/zul">
     <style>
         .banner {
-            background-color:#102d35;
+            background-color:#20b2aa;
             color: white;
             padding: 5px 10px;
         }
         .footer {
-            background-color:#102d35;
+            background-color:#20b2aa;
             color: white;
             padding: 5px 10px;
         }
@@ -40,16 +40,16 @@ Copyright (C) 2006 Potix Corporation. All Rights Reserved.
     
                 <borderlayout hflex="0">
 			<north height="110px" border="none" >
-                               <include src="/banner.zul"/>
+                               <include src="/home/banner.zul"/>
                         </north>
                         <west width="160px" border="none" collapsible="true">
-                            <include src="/Sidebar.zul"/>
+                            <include src="/home/Sidebar.zul"/>
                         </west>
                         <center id="mainContent" autoscroll="true" border="true" self = "@insert(content)">
                                 
                         </center>
                         <south height="50px" border="none">
-                                <include src="/footer.zul"/>
+                                <include src="/home/footer.zul"/>
                         </south>
 		</borderlayout>
 

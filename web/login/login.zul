@@ -1,0 +1,29 @@
+<!-- protect page by the authcontroller  -->
+<?init class="controller.AuthController" name="login"?>
+<zk xmlns="http://www.zkoss.org/2005/zul">
+    <hbox self="@define(content)" vflex="1" hflex="1" align="center"
+          pack="center" spacing="20px" style="background : white;">
+        <vlayout>
+            <window id="win"
+                    apply="controller.loginController"
+                    border="2" hflex="min" >
+                <groupbox id="value" mold="3d" closable="false">
+                    <caption label="Login Form" />			
+                    <vbox hflex="min" align="center" >
+                        <label id="message" />
+                        <div class="input-group" >
+                            <textbox id="username" focus="true" placeholder="username"  />
+                        </div>
+                        <div class="input-group" width="300px">
+                            <textbox id="password" placeholder="password" type="password"  />
+                        </div>
+                        <div> 
+                            <button id="login" label="Enter" />
+                        </div>
+                    </vbox>
+                </groupbox>
+                
+            </window>
+        </vlayout>
+    </hbox>
+</zk>

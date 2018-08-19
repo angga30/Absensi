@@ -1,5 +1,6 @@
 <?link rel="stylesheet" type="text/css" href="/style.css"?>
 <?init class="org.zkoss.zk.ui.util.Composition" arg0="/home/template.zul"?>
+<?init class="controller.AuthController" name="login"?>
 <zk>
-	<include id="mainInclude" self="@define(content)" src="/ajaxbased/home.zul"/>
+	<include id="mainInclude" self="@define(content)" src="/login/login.zul"/>
 </zk>

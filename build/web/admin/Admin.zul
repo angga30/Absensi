@@ -1,0 +1,83 @@
+
+<zk>
+    <grid align = "center" apply="controller.admin">
+		<columns>
+			<column style = "font-size:20px" label="Administrator"/>
+		</columns>
+		<rows>
+			<row>	
+                            <tabbox id="tb" height="400px">
+                                <tabs id="tabs">
+                                    <tab id="A" label="Tambah Data Karyawan" />
+                                    <tab id="B" label="Edit Absensi" />
+                                </tabs>
+                                <tabpanels>
+                                    <tabpanel>
+                                        <hbox>
+                                        <vbox align ="left">
+                                            <label value="Id :"/>
+                                            <textbox id="tId"/>
+                                            <label value="Nama :"/>
+                                            <textbox id="tNama"/>
+                                           
+                                        </vbox>
+                                        <listbox id="lb" width="100%" height="330px"
+					mold = "paging" pageSize="10">
+						<listhead>
+							<listheader label="Id"/>
+							<listheader label="Nama"/>
+						</listhead>
+						<listitem>
+							<listcell label=""/>
+							<listcell label=""/>
+						</listitem>
+						
+					</listbox>
+                                        </hbox>
+                                        <hbox>
+                                            
+                                            <button width = "80px" label="Simpan" id="btnSave"></button>
+                                            <button width = "80px" label="Delete" id="btnDel"></button>
+                                        </hbox>
+                                    </tabpanel>
+                                    <tabpanel>
+                                        <listbox id="lst" width="100%" height="250px" mold="paging" pageSize="5">
+                                                        <listhead>
+                                                            <listheader label="No"/>
+                                                            <listheader label="Tanggal"/>
+                                                            <listheader label="Nama"/>
+                                                            <listheader label="Jam Masuk"/>
+                                                            <listheader label="Jam Pulang"/>
+                                                            <listheader label="Lembur Masuk"/>
+                                                            <listheader label="lembur Pulang"/>
+                                                            
+                                                        </listhead>
+                                                        <listitem>
+                                                            <listcell label=""/>
+                                                            <listcell label=""/>
+                                                        </listitem>
+						
+                                                    </listbox>
+                                        <grid>
+                                            <columns>
+                                                <column label="Edit Absensi"/>
+                                                    
+                                            </columns>
+                                            <rows>
+                                                <row>
+                                                    
+                                                </row>
+                                                <row>
+                                                    <label value="No tanggal"/>
+                                                </row>
+                                            </rows>
+                                               
+                                        </grid>
+                                    </tabpanel>
+                                    
+                                </tabpanels>
+                            </tabbox>
+			</row>
+		</rows>
+	</grid>
+</zk>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Aug 15, 2018 9:34:28 AM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="mapping.TableUser" table="tableUser" catalog="ABSENSI" optimistic-lock="version">
+        <id name="userId" type="java.lang.Integer">
+            <column name="user_id" />
+            <generator class="identity" />
+        </id>
+        <property name="userName" type="string">
+            <column name="user_name" length="100" />
+        </property>
+        <set name="absensis" table="absensi" inverse="true" lazy="true" fetch="select">
+            <key>
+                <column name="user_id" />
+            </key>
+            <one-to-many class="mapping.Absensi" />
+        </set>
+    </class>
+</hibernate-mapping>

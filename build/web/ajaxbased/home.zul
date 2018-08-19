@@ -1,5 +1,15 @@
 <zk>
-<vbox vflex="1" hflex="1" >
+<zscript>
+    int countNum = 10;
+    int a;
+    String b="";
+    void restart() {
+        countNum = 10;
+        pm.value = 0;
+        timer.start();
+    }
+</zscript>
+<vbox vflex="1" hflex="1" apply="controller.home">
         <grid align = "center">
 		<columns>
 			<column align="center" label = "Input Absensi"/>
@@ -16,13 +26,13 @@
                         <row>
                             <label value="Jenis Absen :"/>
                             <combobox width ="220px" id = "cmbJenis">
-		     		<comboitem label="Masuk"/>
-                                <comboitem label="Pulang"/>
-                                <comboitem label="Lembur"/>
+		     		<comboitem label="Absen Masuk"/>
+                                <comboitem label="Absen Lembur"/>
+                                
                             </combobox>
                         </row>
                         <row>
-                            <label value="Jam :"/><label style = "font-size:20px" id="jam" value="00:00"/>
+                            <label value="Jam :"/><label style = "font-size:20px" id="jam"/>
                         </row>
                         <row>
                             <label value="Tanggal :"/><label style = "font-size:20px" id="tgl" value="xx/xx/xxxx"/>
@@ -32,7 +42,7 @@
         <grid align="center">
 		<columns>
                     <column align="center">
-                        <button width="90px" label="Simpan" onClick="btnSave"></button>
+                        <button width="90px" label="Simpan" id="btnSave"></button>
                     </column>
 		</columns>
 		<rows>
@@ -41,5 +51,52 @@
 		</rows>
 	</grid>
 </vbox>
+<timer id="timer" delay="1000" repeats="true">
+        <attribute name="onTimer">
+    jam.setValue(new Date().getHours().toString()+":"+new Date().getMinutes().toString()+":"+new Date().getSeconds().toString());
+    count.value = "Count : " + --countNum + "";
+            String b = "";
+            
+            switch ((new Date().getMonth()+1)){
+            case 0 : 
+            b = "Januari"; 
+            break;
+            case 2: 
+            b = "Februari"; 
+            break;
+            case 3: 
+            b = "Maret"; 
+            break;
+            case 4: 
+            b = "April"; 
+            break;
+            case 5: 
+            b = "Mei"; 
+            break;
+            case 6: 
+            b = "Juni"; 
+            break;
+            case 7: 
+            b = "Juli"; 
+            break;
+            case 8: 
+            b = "Agustus"; 
+            break;
+            case 9: 
+            b = "September"; 
+            break;
+            case 10: 
+            b = "Oktober"; break;
+            case 11: 
+            b = "November"; 
+            break;
+            case 12: 
+            b = "Desember"; 
+            break;
+            }
+            
+    tgl.setValue(new Date().getDate()+"-"+b+"-"+(new Date().getYear()+1900).toString());
+</attribute>
+</timer>
 
 </zk>
